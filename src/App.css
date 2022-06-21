@@ -7,6 +7,9 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap');
 
+body{
+  background-color:#ebeced;
+}
 .header{
   padding:1.2rem;
   background-image: linear-gradient(315deg, #2a2a72 1%, #009ffd 74%);
@@ -15,11 +18,26 @@
 .logo{
   color:white;
   font-weight: bold;
-  /* background-color: white; */
   padding:0.5rem;
   border-radius: 4px;
-  border:1px solid white;
 
+}
+.menu{
+  width:40px;
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  left:20vw;
+  top:15px;
+  padding:2px;
+  align-items: center;
+}
+.menuBar{
+  width:25px;
+  height:3px;
+  padding:2px;
+  background-color: white;
+  margin:2px;
 }
 .searchBar{
   padding:0.5rem;
@@ -41,24 +59,218 @@
   color:darkgrey;
   font-size: 20px;
 }
+.adminImage{
+  width:40px;
+  height:40px;
+  position: absolute;
+  right:10vw;
+  top:1vh;
+  border: 2px solid white;
+  border-radius: 50%;
+}
 .sideBar{
   display:flex;
   flex-direction: column;
-  width:200px;
-  height:100vh;
+  width:230px;
+  height:100%;
   background-image: linear-gradient(315deg, #2a2a72 1%, #009ffd 74%);
+  transition: all 0.5s;
+  position:absolute;
+  z-index:99;
 }
-.link{
-  width:200px;
+.sideBarIcons{
+  display:flex;
+  flex-direction: column;
+  width:60px;
+  height:100%;
+  background-image: linear-gradient(315deg, #2a2a72 1%, #009ffd 74%);
+  transition: all 0.5s;
+  position:absolute;
+  z-index:99;
+}
+
+.sideBarIcons i{
+  position: relative;
+  top:0px;
+  left:0px;
+}
+
+.faLeft{
+  position: absolute;
+  left:20px;
+  font-size: 20px;
+}
+.linkDiv{
+  max-width:230px;
   padding:1rem;
   text-align: center;
   margin-bottom:0.3rem auto;
   color:white;
   font-weight: bold;
   transition: all 0.7s;
-  /* border-radius: 20px; */
+  cursor: pointer;
 }
-.link:hover{
+.linkDiv:hover{
   background-color: white;
   color:darkgrey;
+}
+.hide{
+  display:none;
+}
+.tileBox{
+  position: absolute;
+  top:10vh;
+  right:8vw;
+  /* border:2px solid red; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:80vw;
+  align-items: center;
+  justify-content: center;
+}
+.tile{
+  width:230px;
+  min-height:120px;
+  background-image: none;
+  margin:15px;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5), -5px -5px 10px rgba(255,255,255,0.8);
+  transition: all 0.3s;
+  color:grey;
+}
+.tile:hover{
+  color:#007fff;
+  
+}
+.tile h3{
+  position:relative;
+  bottom:-25px;
+}
+.tile .fa{
+  font-size: 36px;
+  position:relative;
+  top:0px;
+  margin-left: 150px;
+}
+.tile span:nth-child(1){
+  font-weight: bold;
+  position: relative;
+  top:-1px;
+}
+
+
+
+
+
+
+
+/* bar chart css */
+
+.charts{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width:75vw;
+  margin:2rem auto;
+  position: absolute;
+  top:40vh;
+  left:14vw;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5), -5px -5px 10px rgba(255,255,255,0.8);
+  border-radius: 10px;
+  
+}
+.barGraphDiv{
+  width:300px;
+  margin:2rem;
+}
+.pieGraphDiv{
+  width:300px;
+  margin:2rem 2rem;
+}
+.footer{
+  position:absolute;
+  bottom:-90px;
+  right:0;
+  width:100vw;
+  background-image: linear-gradient(315deg, #2a2a72 1%, #009ffd 74%);
+  height:30px;
+  color:white;
+  text-align: center;
+}
+
+
+
+/* for pages not yet made */
+.underProcess{
+  max-width:80vw;
+  margin:10vh auto;
+  padding:1rem;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5), -5px -5px 10px rgba(255,255,255,0.8);
+  border-radius: 10px;
+  color:grey;
+  text-align: center;
+}
+.underProcess:hover{
+  color:#007fff;
+}
+
+
+
+@media screen and (max-width:650px){
+  .logo{
+    position: relative;
+    left:-20px;
+    font-size: 12px;
+  }
+  .adminImage{
+    right:5px;
+  }
+  .searchBar{
+    right: 15vw;
+    top: 13px;
+    padding-left: 10px;
+    padding-right: 35px;
+  }
+  .menu{
+    left:30vw;
+  }
+  .fa-search{
+    right:18vw;
+    top:18px;
+  
+  }
+  .tile{
+    margin:0px;
+    margin-bottom: 20px;
+  }
+  .charts{
+    top:80vh;
+    margin-bottom: 50px;
+  }
+  .barGraphDiv{
+    width:250px;
+  }
+  .pieGraphDiv{
+    width:250px;
+  }
+  .underProcess{
+    position: absolute;
+    right:2vw;
+  }
+  .sideBar{
+    height:50vh;
+    border-bottom-right-radius: 50px;
+  }
+  .sideBarIcons{
+    height:50vh;
+    border-bottom-right-radius: 50px;
+  }
+  .footer{
+    bottom:-500px;
+  }
+
 }

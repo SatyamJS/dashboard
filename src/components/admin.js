@@ -1,25 +1,42 @@
 import { React, Component } from "react";
 import "../App.css"
+import BarComponent from "./barChart";
+import PieComponent from "./polarChart";
 
 
 class Admin extends Component {
     render() {
         return (
             <>
-                <div className="header">
-                    <span className="logo">Company Name</span>
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                <div className="tileBox">
+                    <div className="tile">
+                        <span> 14576</span><br/>
+                        <span><i class="fa fa-eye" aria-hidden="true"></i></span>
+                        <h3>Daily views</h3>
 
-                    <input type="text" className="searchBar" placeholder="Search here" />
+                    </div>
+                    <div className="tile">
+                    <span> 57</span><br/>
+                        <span><i class="fa fa-comment" aria-hidden="true"></i></span>
+                        <h3>Comments</h3>
+
+                    </div>
+                    <div className="tile">
+                    <span> 139</span><br/>
+                        <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        <h3>Sales</h3>
+
+                    </div>
+                    <div className="tile">
+                    <span> $24567</span><br/>
+                        <span><i class="fa fa-money" aria-hidden="true"></i></span>
+                        <h3>Earnings</h3>
+
+                    </div>
                 </div>
-                <div className="sideBar">
-                    <span className="link"><i className="fa fa-home" aria-hidden="true"></i> Dashboard</span>
-                    <span className="link"><i className="fa fa-users" aria-hidden="true"></i> Customer</span>
-                    <span className="link"><i className="fa fa-comment" aria-hidden="true"></i> Message</span>
-                    <span className="link"><i className="fa fa-question" aria-hidden="true"></i> Help</span>
-                    <span className="link"><i className="fa fa-cog" aria-hidden="true"></i> Settings</span>
-                    <span className="link"><i className="fa fa-lock" aria-hidden="true"></i> Password</span>
-                    <span className="link"><i className="fa fa-sign-out" aria-hidden="true"></i> Sign Out</span>
+                <div className="charts">
+                <BarComponent />
+                <PieComponent />
                 </div>
             </>
         )

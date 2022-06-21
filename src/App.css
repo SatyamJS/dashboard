@@ -230,10 +230,11 @@ body{
     right:5px;
   }
   .searchBar{
-    right: 15vw;
+    /*right: 15vw;
     top: 13px;
     padding-left: 10px;
-    padding-right: 35px;
+    padding-right: 35px;*/
+    display:none;
   }
   .menu{
     left:30vw;
@@ -241,6 +242,7 @@ body{
   .fa-search{
     right:18vw;
     top:18px;
+    color:white;
   
   }
   .tile{

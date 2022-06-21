@@ -248,29 +248,30 @@ body{
     margin-bottom: 20px;
   }
   .charts{
-    top:80vh;
-    margin-bottom: 50px;
+    top:85vh;
+    width:320px;
+    left:20px;
   }
   .barGraphDiv{
-    width:250px;
+    width:300px;
   }
   .pieGraphDiv{
-    width:250px;
+    width:300px;
   }
   .underProcess{
     position: absolute;
     right:2vw;
   }
   .sideBar{
-    height:50vh;
+    height:55vh;
     border-bottom-right-radius: 50px;
   }
   .sideBarIcons{
-    height:50vh;
+    height:55vh;
     border-bottom-right-radius: 50px;
   }
   .footer{
-    bottom:-500px;
+    bottom:-550px;
   }
 
 }

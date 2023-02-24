@@ -20,13 +20,13 @@ class Navbar extends Component {
         return (
             <>
                 <div className="header">
-                    <span className="logo">Company Name</span>
+                    <span className="logo">Dashboard</span>
                     <div className="menu" onClick={this.handleMenuClick}>
-                        <span class="menuBar"></span>
-                        <span class="menuBar"></span>
-                        <span class="menuBar"></span>
+                        <span className="menuBar"></span>
+                        <span className="menuBar"></span>
+                        <span className="menuBar"></span>
                     </div>
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <i className="fa fa-search" aria-hidden="true"></i>
 
                     <input type="text" className="searchBar" placeholder="Search here" />
                     <img className="adminImage" src="./admin.jpg" alt="admin" />

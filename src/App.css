@@ -4,6 +4,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: 'Libre Franklin', sans-serif;
+  /* outline:2px solid red; */
 }
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap');
 
@@ -82,7 +83,7 @@ body{
   display:flex;
   flex-direction: column;
   width:60px;
-  height:100%;
+  height:80%;
   background-image: linear-gradient(315deg, #2a2a72 1%, #009ffd 74%);
   transition: all 0.5s;
   position:absolute;
@@ -118,30 +119,29 @@ body{
   display:none;
 }
 .tileBox{
-  position: absolute;
-  top:10vh;
-  right:8vw;
-  /* border:2px solid red; */
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width:80vw;
   align-items: center;
   justify-content: center;
+  margin:10vh auto;
 }
 .tile{
-  width:230px;
+  max-width:230px;
   min-height:120px;
   background-image: none;
   margin:15px;
   padding: 10px;
   border-radius: 12px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.5), -5px -5px 10px rgba(255,255,255,0.8);
-  transition: all 0.3s;
+  transition: all 0.5s;
   color:grey;
 }
 .tile:hover{
   color:#007fff;
+  box-shadow: inset 1px 1px 5px grey;
   
 }
 .tile h3{
@@ -174,13 +174,14 @@ body{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width:75vw;
+  max-width:75vw;
   margin:2rem auto;
-  position: absolute;
-  top:40vh;
-  left:14vw;
+  position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.5), -5px -5px 10px rgba(255,255,255,0.8);
   border-radius: 10px;
+  /* border:2px solid red; */
+  margin-bottom: 10vh;
+  padding: 20px;
   
 }
 .barGraphDiv{
@@ -192,12 +193,9 @@ body{
   margin:2rem 2rem;
 }
 .footer{
-  position:absolute;
-  bottom:-90px;
-  right:0;
-  width:100vw;
+  width:100%;
   background-image: linear-gradient(315deg, #2a2a72 1%, #009ffd 74%);
-  height:30px;
+  padding: 20px;;
   color:white;
   text-align: center;
 }
@@ -206,13 +204,17 @@ body{
 
 /* for pages not yet made */
 .underProcess{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width:80vw;
+  height:100vh;
   margin:10vh auto;
   padding:1rem;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.5), -5px -5px 10px rgba(255,255,255,0.8);
   border-radius: 10px;
   color:grey;
-  text-align: center;
+  /* text-align: center; */
 }
 .underProcess:hover{
   color:#007fff;
@@ -230,10 +232,6 @@ body{
     right:5px;
   }
   .searchBar{
-    /*right: 15vw;
-    top: 13px;
-    padding-left: 10px;
-    padding-right: 35px;*/
     display:none;
   }
   .menu{
@@ -245,35 +243,27 @@ body{
     color:white;
   
   }
-  .tile{
-    margin:0px;
-    margin-bottom: 20px;
-  }
   .charts{
-    top:85vh;
-    width:320px;
-    left:20px;
+    max-width:90vw;
   }
+
   .barGraphDiv{
-    width:300px;
+    max-width:300px;
   }
   .pieGraphDiv{
-    width:300px;
+    max-width:300px;
   }
-  .underProcess{
-    position: absolute;
-    right:2vw;
+  .lineGraphDiv{
+    max-width:300px;
+
   }
   .sideBar{
     height:55vh;
-    border-bottom-right-radius: 50px;
+    width:100vw;
   }
   .sideBarIcons{
     height:55vh;
     border-bottom-right-radius: 50px;
-  }
-  .footer{
-    bottom:-600px;
   }
 
 }

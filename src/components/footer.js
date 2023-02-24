@@ -7,7 +7,7 @@ class Footer extends Component{
         return (
             <>
             <div className="footer">
-            <p>&copy; 2022 Comapany Name</p>
+            <p>&copy; 2022 Satyam Gupta Dashboard App</p>
             </div>
             </>
          )
